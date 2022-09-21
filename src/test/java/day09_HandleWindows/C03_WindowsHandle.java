@@ -1,4 +1,4 @@
-package day09;
+package day09_HandleWindows;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
@@ -53,14 +53,14 @@ public class C03_WindowsHandle {
        Assert.assertTrue(actualTitle.contains(expectedTitle));
 
        //Yeni bir tab olusturup, acilan tab'da techproeducation.com adresine gidin
-       driver.switchTo().newWindow(WindowType.TAB);
+       driver.switchTo().newWindow(WindowType.TAB);  //yeni bir sekme açmak için bu method kullanılır --> WindowType.TAB
        driver.get("https://www.techproeducation.com");
 
        //Sayfa title’nin “TECHPROEDUCATION” icerdigini test edin
-       Assert.assertFalse(driver.getTitle().contains("TECHPROEDUCATION"));
+       Assert.assertFalse(driver.getTitle().contains("TECHPROEDUCATION")); //manuel olarak baktığımızda içermediği için assertFalse
 
        //Yeni bir window olusturup, acilan sayfada walmart.com adresine gidin
-       driver.switchTo().newWindow(WindowType.WINDOW);
+       driver.switchTo().newWindow(WindowType.WINDOW); //yeni bir window sayfası için WindowType.WINDOW
        driver.get("https://walmart.com");
 
        //Sayfa title’nin “Walmart” icerdigini test edin

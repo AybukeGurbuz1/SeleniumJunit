@@ -1,4 +1,4 @@
-package day09;
+package day09_HandleWindows;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
@@ -76,8 +76,10 @@ String değişkene atadığımız window handle değerleriyle sayfalar arası ge
 
         //7- Yeniden bestbuy sayfasına gidelim
         driver.switchTo().window(bestbuyWindowHandle);
+
         //8- Logonun görünürlüğünü test edelim
         Assert.assertTrue(driver.findElement(By.xpath("(//*[@class='logo'])[1]")).isDisplayed());
+
         //9- Sayfaları Kapatalım
         driver.quit();
 
