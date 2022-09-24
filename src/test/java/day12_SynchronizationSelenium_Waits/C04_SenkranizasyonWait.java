@@ -31,5 +31,8 @@ public class C04_SenkranizasyonWait extends TestBaseBeforeAfter {
         //Textbox’in etkin oldugunu(enabled) dogrulayın.
         Assert.assertTrue(textBox.isEnabled());
 
+
+
+
     }
 }
