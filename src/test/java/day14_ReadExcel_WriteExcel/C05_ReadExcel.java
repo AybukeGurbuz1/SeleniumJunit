@@ -28,9 +28,17 @@ public class C05_ReadExcel {
 
         //-sayfa 2'ye gidip satir sayisinin 6, kullanilan satir sayisinin ise 3 oldugunu test edin
 
-        int sonSatirIndex = workbook.
-                getSheet("Sayfa2").
-                getLastRowNum();
+        int sonSatir = workbook.getSheet("Sayfa2").getLastRowNum();
+        System.out.println(sonSatir);
+        int expectedLastRow = 6;
+        Assert.assertEquals(expectedLastRow, sonSatir+1);
+
+        int kullanilanSAtir = workbook.getSheet("Sayfa2").getPhysicalNumberOfRows();
+        // excel tablosunda kullanılam satır sayisini bu method ile alırız
+        System.out.println(kullanilanSAtir);
+
+        //lastRow --> en son yazilan satir
+        //Physical --> kullanilan satir sayisi
 
 
 
